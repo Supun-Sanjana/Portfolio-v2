@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import React from "react"
+import React from "react";
 
-import { useEffect, useRef, useState } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { Github, Linkedin, Mail, Send } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Github, Linkedin, Mail, Send } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 export function Contact() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const formRef = useRef<HTMLFormElement>(null)
-  const blackHoleRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const blackHoleRef = useRef<HTMLDivElement>(null);
   const [formState, setFormState] = useState({
     name: "",
     email: "",
     message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -37,8 +37,8 @@ export function Contact() {
             start: "top 70%",
             toggleActions: "play none none reverse",
           },
-        }
-      )
+        },
+      );
 
       // Form animation
       gsap.fromTo(
@@ -55,8 +55,8 @@ export function Contact() {
             start: "top 60%",
             toggleActions: "play none none reverse",
           },
-        }
-      )
+        },
+      );
 
       // Black hole parallax effect (subtle warp)
       if (blackHoleRef.current) {
@@ -69,36 +69,36 @@ export function Contact() {
             end: "bottom top",
             scrub: 1,
           },
-        })
+        });
       }
-    }, sectionRef)
+    }, sectionRef);
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
+    e.preventDefault();
+    setIsSubmitting(true);
+
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormState({ name: "", email: "", message: "" })
-    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    setFormState({ name: "", email: "", message: "" });
+
     // Reset submission state after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000)
-  }
+    setTimeout(() => setIsSubmitted(false), 3000);
+  };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormState((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   return (
     <section
@@ -216,7 +216,7 @@ export function Contact() {
               </h4>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/supun-sanjana"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 bg-gray-100 rounded-lg hover:bg-black hover:text-white transition-all duration-300 group"
@@ -228,7 +228,7 @@ export function Contact() {
                   />
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://www.linkedin.com/in/sanjana-supun-b37a952a2/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 bg-gray-100 rounded-lg hover:bg-black hover:text-white transition-all duration-300 group"
@@ -240,7 +240,7 @@ export function Contact() {
                   />
                 </a>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:infor.ssupun@gmail.com"
                   className="p-4 bg-gray-100 rounded-lg hover:bg-black hover:text-white transition-all duration-300 group"
                   aria-label="Send me an email"
                 >
@@ -257,10 +257,10 @@ export function Contact() {
                 Email
               </h4>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:infor.ssupun@gmail.com"
                 className="text-xl font-medium hover:text-gray-600 transition-colors"
               >
-                your.email@example.com
+                infor.ssupun@gmail.com
               </a>
             </div>
 
@@ -268,12 +268,12 @@ export function Contact() {
               <h4 className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-4">
                 Location
               </h4>
-              <p className="text-xl font-medium">Your City, Country</p>
+              <p className="text-xl font-medium">Galle, Sri Lanka</p>
               <p className="text-gray-500 mt-1">Available for remote work</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

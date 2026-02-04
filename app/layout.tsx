@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Supun | Full-Stack Developer & Software Engineer",
+  title: "SUPUN | Full-Stack Developer & Software Engineer",
   description:
     "Full-stack software developer specializing in Next.js, React, Laravel, Android apps, e-commerce, POS systems, and UI design with AI integration. Building immersive web & mobile experiences.",
   keywords: [
@@ -26,20 +26,20 @@ export const metadata: Metadata = {
     "UI/UX Design",
     "AI Integration",
   ],
-  authors: [{ name: "Supun" }],
-  creator: "Supun",
+  authors: [{ name: "SUPUN" }],
+  creator: "SUPUN",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://yourwebsite.com",
-    title: "Supun | Full-Stack Developer & Software Engineer",
+    title: "SUPUN | Full-Stack Developer & Software Engineer",
     description:
       "Full-stack software developer specializing in Next.js, React, Laravel, Android apps, e-commerce, POS systems, and UI design with AI integration.",
-    siteName: "Supun Portfolio",
+    siteName: "SUPUN Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Supun | Full-Stack Developer & Software Engineer",
+    title: "SUPUN | Full-Stack Developer & Software Engineer",
     description:
       "Full-stack software developer specializing in Next.js, React, Laravel, Android apps, e-commerce, POS systems, and UI design with AI integration.",
     creator: "@yourusername",

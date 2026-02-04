@@ -1,27 +1,28 @@
-"use client"
+"use client";
 
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-import { About } from "@/components/portfolio/about"
-import { Contact } from "@/components/portfolio/contact"
-import { Footer } from "@/components/portfolio/footer"
-import { Hero } from "@/components/portfolio/hero"
-import { Navigation } from "@/components/portfolio/navigation"
-import { Projects } from "@/components/portfolio/projects"
-import { TechStack } from "@/components/portfolio/tech-stack"
+import { Navigation } from "@/components/portfolio/navigation";
+import { Hero } from "@/components/portfolio/hero";
+import { About } from "@/components/portfolio/about";
+import { Projects } from "@/components/portfolio/projects";
+import { TechStack } from "@/components/portfolio/tech-stack";
+import { Contact } from "@/components/portfolio/contact";
+import { Footer } from "@/components/portfolio/footer";
 
 // Register GSAP plugins
-// if (typeof window !== "undefined") {
-//   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
-// }
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+}
 
 export default function Portfolio() {
-
-  //snap to next section by scroll
-
   // useEffect(() => {
   //   // Smooth scroll configuration
   //   const sections = document.querySelectorAll("section")
-    
+
   //   sections.forEach((section) => {
   //     ScrollTrigger.create({
   //       trigger: section,
@@ -60,5 +61,5 @@ export default function Portfolio() {
       <Contact />
       <Footer />
     </main>
-  )
+  );
 }
