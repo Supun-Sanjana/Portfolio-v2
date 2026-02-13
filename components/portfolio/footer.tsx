@@ -16,9 +16,7 @@ export function Footer() {
               <span className="text-white font-medium">Supun</span>. All rights
               reserved.
             </p>
-            <p className="text-gray-600 text-sm mt-1">
-              Built with Next.js, Tailwind CSS & GSAP
-            </p>
+           
           </div>
 
           {/* Social Links */}

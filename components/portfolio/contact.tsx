@@ -5,7 +5,7 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Mail, Send, Store } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -245,6 +245,18 @@ export function Contact() {
                   aria-label="Send me an email"
                 >
                   <Mail
+                    size={24}
+                    className="group-hover:scale-110 transition-transform"
+                  />
+                </a>
+                <a
+                  href="https://www.fiverr.com/s/38QW7YB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 bg-gray-100 rounded-lg hover:bg-black hover:text-white transition-all duration-300 group"
+                  aria-label="Visit my Fiverr profile"
+                >
+                  <Store
                     size={24}
                     className="group-hover:scale-110 transition-transform"
                   />
