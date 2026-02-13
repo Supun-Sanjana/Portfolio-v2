@@ -33,7 +33,7 @@ const projects = [
       "An official website developed using pure PHP for the National Vocational Training Authority (NVTI) Baddegama center, providing institutional information, course details, and announcements with a simple and reliable backend.",
     image: "/nvti.png",
     tech: ["php", "mysql", "Tailwind"],
-    liveUrl: "https://zenleaf.nvtibaddegama.site",
+    liveUrl: "https://nvtibaddegama.site/",
     githubUrl: "#",
   },
   {
