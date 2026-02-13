@@ -13,7 +13,7 @@ const projects = [
     title: "Hotel Management System (MERN) ",
     description:
       "A complete MERN-based hotel management system for managing bookings, rooms, customers, and staff.",
-    image: "/placeholder-project-1.jpg",
+    image: "/lux.png",
     tech: ["React", "Express", "Mongo db", "Node js","Tailwind","Vercel", "GitHub Actions"],
     liveUrl: "https://luxesphere.vercel.app",
     githubUrl: "#",
@@ -22,7 +22,7 @@ const projects = [
     title: "Client Sync",
     description:
       "CRM application built to help businesses manage clients, projects, and internal operations",
-    image: "/placeholder-project-2.jpg",
+    image: "/cli.png",
     tech: ["React", "Express" , "Node.js", "PostgreSQL","Tailwind", "Vercel", "GitHub Actions"],
     liveUrl: "https://client-sync-sig.vercel.app",
     githubUrl: "#",
@@ -31,7 +31,7 @@ const projects = [
     title: "NVTI Baddegama Website (Pure PHP)",
     description:
       "An official website developed using pure PHP for the National Vocational Training Authority (NVTI) Baddegama center, providing institutional information, course details, and announcements with a simple and reliable backend.",
-    image: "/placeholder-project-3.jpg",
+    image: "/nvti.png",
     tech: ["php", "mysql", "Tailwind"],
     liveUrl: "https://zenleaf.nvtibaddegama.site",
     githubUrl: "#",
@@ -40,7 +40,7 @@ const projects = [
     title: "ERP System (Next.js)",
     description:
       "A modern internal ERP system built with Next.js to manage company operations, including workflows, data management, and role-based access, optimized for performance and scalability.",
-    image: "/placeholder-project-4.jpg",
+    image: "/sup-erp.png",
     tech: ["Next.js", "Tailwind", "Prisma", "PostgreSQL", "Vercel", "GitHub Actions", "Docker"],
     liveUrl: "#",
     githubUrl: "#",
@@ -49,9 +49,9 @@ const projects = [
     title: "Landing page for Plantation Company",
     description:
       "A responsive and SEO-friendly company website developed with Next.js, showcasing services, brand identity, and key information with fast load times and a modern user experience.",
-    image: "/placeholder-project-5.jpg",
+    image: "/sup-web.png",
     tech: ["Next.js", "Tailwind", "gsap", "Vercel"],
-    liveUrl: "#",
+    liveUrl: "https://super-green-web.vercel.app",
     githubUrl: "#",
   }
 ]
@@ -135,18 +135,14 @@ export function Projects() {
               {/* Image */}
               <div className="aspect-video relative overflow-hidden">
                 <Image
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image }
                   alt={project.title}
                   fill
                   className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                {/* Fallback placeholder */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-gray-600">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
+                
+                
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                   <a

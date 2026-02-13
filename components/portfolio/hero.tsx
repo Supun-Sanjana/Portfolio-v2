@@ -473,7 +473,7 @@ export function Hero() {
           >
             <div className="aspect-video relative">
               <Image
-                src="/placeholder-project-1.jpg"
+                src="/sup-erp.png"
                 alt="Featured project preview"
                 fill
                 className="object-cover grayscale"
