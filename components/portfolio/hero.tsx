@@ -17,7 +17,7 @@ const roles = [
 
 const stats = [
   { value: 50, suffix: "+", label: "Projects" },
-  { value: 5, suffix: "+", label: "Years Exp" },
+  { value: 4, suffix: "+", label: "Years Exp" },
   { value: 99.9, suffix: "%", label: "Satisfaction" },
 ];
 
@@ -483,15 +483,15 @@ export function Hero() {
                 <span className="text-xs text-gray-400 uppercase tracking-wider">
                   Latest Project
                 </span>
-                <h4 className="text-white font-semibold">POS System with AI</h4>
+                <h4 className="text-white font-semibold">ERP System (Next.js)</h4>
               </div>
             </div>
             <div className="p-4">
               <p className="text-xs text-gray-400 mb-3">
-                Smart inventory management with AI-powered predictions
+                A modern internal ERP system built with Next.js to manage company operations
               </p>
               <div className="flex gap-2">
-                {["Next.js", "AI", "Laravel"].map((tech) => (
+                {["Next.js", "Prisma", "PostgreSQL", "Vercel"].map((tech) => (
                   <span
                     key={tech}
                     className="px-2 py-1 text-xs bg-white/10 text-gray-300 rounded"

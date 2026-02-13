@@ -248,7 +248,7 @@ export function About() {
               style={{ transformStyle: "preserve-3d" }}
             >
               <Image
-                src="/placeholder-profile.jpg"
+                src="/profile.png"
                 alt="Supun - Full-Stack Developer"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
@@ -268,7 +268,7 @@ export function About() {
               className="absolute -right-4 top-8 p-4 bg-black text-white rounded-xl shadow-2xl"
               style={{ transform: "translateZ(50px)" }}
             >
-              <div className="text-3xl font-bold">5+</div>
+              <div className="text-3xl font-bold">4+</div>
               <div className="text-xs text-gray-400 uppercase tracking-wider">
                 Years Exp
               </div>

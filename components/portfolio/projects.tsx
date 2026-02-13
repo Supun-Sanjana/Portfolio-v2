@@ -10,59 +10,50 @@ gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
-    title: "Supermarket POS with AI",
+    title: "Hotel Management System (MERN) ",
     description:
-      "A comprehensive point-of-sale system featuring AI-powered inventory predictions, real-time sales analytics, and seamless payment integration.",
+      "A complete MERN-based hotel management system for managing bookings, rooms, customers, and staff.",
     image: "/placeholder-project-1.jpg",
-    tech: ["Next.js", "Laravel", "TensorFlow", "PostgreSQL"],
-    liveUrl: "#",
+    tech: ["React", "Express", "Mongo db", "Node js","Tailwind","Vercel", "GitHub Actions"],
+    liveUrl: "https://luxesphere.vercel.app",
     githubUrl: "#",
   },
   {
-    title: "Student Management App",
+    title: "Client Sync",
     description:
-      "A cross-platform Android application for educational institutions to manage student records, attendance, and academic performance.",
+      "CRM application built to help businesses manage clients, projects, and internal operations",
     image: "/placeholder-project-2.jpg",
-    tech: ["React Native", "Node.js", "MongoDB", "Firebase"],
-    liveUrl: "#",
+    tech: ["React", "Express" , "Node.js", "PostgreSQL","Tailwind", "Vercel", "GitHub Actions"],
+    liveUrl: "https://client-sync-sig.vercel.app",
     githubUrl: "#",
   },
   {
-    title: "E-commerce Platform",
+    title: "NVTI Baddegama Website (Pure PHP)",
     description:
-      "A scalable e-commerce solution with multi-vendor support, real-time inventory, and integrated payment gateways.",
+      "An official website developed using pure PHP for the National Vocational Training Authority (NVTI) Baddegama center, providing institutional information, course details, and announcements with a simple and reliable backend.",
     image: "/placeholder-project-3.jpg",
-    tech: ["Next.js", "Stripe", "Prisma", "Tailwind"],
-    liveUrl: "#",
+    tech: ["php", "mysql", "Tailwind"],
+    liveUrl: "https://zenleaf.nvtibaddegama.site",
     githubUrl: "#",
   },
   {
-    title: "AI Content Generator",
+    title: "ERP System (Next.js)",
     description:
-      "An intelligent content creation tool that leverages GPT models to generate marketing copy, blog posts, and social media content.",
+      "A modern internal ERP system built with Next.js to manage company operations, including workflows, data management, and role-based access, optimized for performance and scalability.",
     image: "/placeholder-project-4.jpg",
-    tech: ["React", "OpenAI", "Python", "FastAPI"],
+    tech: ["Next.js", "Tailwind", "Prisma", "PostgreSQL", "Vercel", "GitHub Actions", "Docker"],
     liveUrl: "#",
     githubUrl: "#",
   },
   {
-    title: "Real-time Chat Application",
+    title: "Landing page for Plantation Company",
     description:
-      "A modern messaging platform with real-time communication, file sharing, and end-to-end encryption.",
+      "A responsive and SEO-friendly company website developed with Next.js, showcasing services, brand identity, and key information with fast load times and a modern user experience.",
     image: "/placeholder-project-5.jpg",
-    tech: ["Next.js", "Socket.io", "Redis", "AWS"],
+    tech: ["Next.js", "Tailwind", "gsap", "Vercel"],
     liveUrl: "#",
     githubUrl: "#",
-  },
-  {
-    title: "Portfolio Dashboard",
-    description:
-      "A financial portfolio tracking dashboard with real-time stock data, performance analytics, and investment insights.",
-    image: "/placeholder-project-6.jpg",
-    tech: ["React", "D3.js", "Node.js", "GraphQL"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
+  }
 ]
 
 export function Projects() {
