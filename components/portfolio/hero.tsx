@@ -355,7 +355,7 @@ export function Hero() {
                   </div>
                 ))}
               </div>
-              <span className="text-xs text-gray-400">30+ Happy Clients</span>
+              <span className="text-xs text-gray-400">20+ Happy Clients</span>
             </div>
             {stats.map((stat, index) => (
               <div key={stat.label} className="mb-4 last:mb-0">
@@ -477,7 +477,7 @@ export function Hero() {
                 fill
                 className="object-cover grayscale"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent" />
               <div className="absolute bottom-3 left-3 right-3">
                 <span className="text-xs text-gray-400 uppercase tracking-wider">
                   Latest Project

@@ -21,6 +21,7 @@ const space = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "SUPUN | Full-Stack Developer",
+  icons:"/logo.png",
   description:
     "Full-stack software developer specializing in Next.js, React, Laravel, Android apps, e-commerce, POS systems, and UI design with AI integration. Building immersive web & mobile experiences.",
   keywords: [
