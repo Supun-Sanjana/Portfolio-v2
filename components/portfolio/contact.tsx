@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Github, Linkedin, Mail, Send, Store } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,20 +76,37 @@ export function Contact() {
 
     return () => ctx.revert();
   }, []);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormState({ name: "", email: "", message: "" });
+      setIsSubmitted(true);
+      setFormState({ name: '', email: '', message: '' });
+      setTimeout(() => setIsSubmitted(false), 3000);
 
-    // Reset submission state after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
+      console.log('Service ID:', process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
+      console.log('Template ID:', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
+      console.log('Public Key:', process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+
+    } catch (error: any) {
+      console.error('EmailJS error status:', error?.status);
+      console.error('EmailJS error text:', error?.text);
+      console.error('EmailJS full error:', JSON.stringify(error));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (

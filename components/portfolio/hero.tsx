@@ -16,8 +16,8 @@ const roles = [
 ];
 
 const stats = [
-  { value: 50, suffix: "+", label: "Projects" },
-  { value: 4, suffix: "+", label: "Years Exp" },
+  { value: 20, suffix: "+", label: "Projects" },
+  { value: 3, suffix: "+", label: "Years Exp" },
   { value: 99.9, suffix: "%", label: "Satisfaction" },
 ];
 
