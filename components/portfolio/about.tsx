@@ -288,10 +288,11 @@ export function About() {
           {/* Content */}
           <div ref={contentRef} className="space-y-8">
             <div className="about-content-item">
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-balance">
-                Crafting Digital
+              <h3 className="font-syne text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-balance">
+                Full-Stack
+
                 <br />
-                <span className="text-gray-400">Experiences</span>
+                <span className="text-gray-400">Engineer</span>
               </h3>
             </div>
 

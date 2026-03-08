@@ -3,11 +3,20 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { Syne } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 
-const inter = Inter({
+
+// const syne = Syne({
+//   subsets: ["latin"],
+//   variable: "--font-syne",
+//   weight: ["400", "500", "600", "700", "800"],
+// });
+
+const space = Space_Grotesk({
   subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
+  variable: "--font-syne",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -19,6 +28,11 @@ export const metadata: Metadata = {
     "Software Engineer",
     "Next.js",
     "React",
+    "React Native",
+    "Devops",
+    "Docker",
+    "AWS",
+    "n8n",
     "Laravel",
     "Android",
     "E-commerce",
@@ -31,24 +45,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourwebsite.com",
-    title: "SUPUN | Full-Stack Developer & Software Engineer",
+    url: "https://supun.vercel.app",
+    title: "SUPUN | Full-Stack Developer",
     description:
-      "Full-stack software developer specializing in Next.js, React, Laravel, Android apps, e-commerce, POS systems, and UI design with AI integration.",
+      "Full-stack software developer specializing in Next.js, React, Laravel, Android apps, e-commerce,  and UI design with AI integration.",
     siteName: "SUPUN Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SUPUN | Full-Stack Developer & Software Engineer",
+    title: "SUPUN | Full-Stack Developer",
     description:
-      "Full-stack software developer specializing in Next.js, React, Laravel, Android apps, e-commerce, POS systems, and UI design with AI integration.",
-    creator: "@yourusername",
+      "Full-stack software developer specializing in Next.js, React, Laravel, Android apps, e-commerce, and UI design with AI integration.",
+    creator: "@Supun-Sanjana",
   },
   robots: {
     index: true,
     follow: true,
   },
-  generator: "v0.app",
 };
 
 export const viewport: Viewport = {
@@ -65,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} font-sans antialiased bg-black text-white overflow-x-hidden`}
+        className={`${space.className} font-sans antialiased bg-black text-white overflow-x-hidden`}
       >
         {children}
         <Analytics />
