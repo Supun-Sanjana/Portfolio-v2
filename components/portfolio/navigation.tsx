@@ -3,33 +3,40 @@
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Menu, X } from "lucide-react";
+import { Home, User, FolderOpen, Layers, Mail } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const navItems = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Tech Stack", href: "#tech" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "#hero", icon: Home },
+  { label: "About", href: "#about", icon: User },
+  { label: "Projects", href: "#projects", icon: FolderOpen },
+  { label: "Stack", href: "#tech", icon: Layers },
+  { label: "Contact", href: "#contact", icon: Mail },
 ];
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("hero");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
+  const bottomNavRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Animate nav on load
+    // Animate top nav on load
     gsap.fromTo(
       navRef.current,
       { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.5 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.5 }
     );
 
-    // Progress bar animation
+    // Animate bottom nav on load
+    gsap.fromTo(
+      bottomNavRef.current,
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.7 }
+    );
+
+    // Progress bar
     gsap.to(progressRef.current, {
       scaleX: 1,
       ease: "none",
@@ -67,11 +74,11 @@ export function Navigation() {
         ease: "power3.inOut",
       });
     }
-    setIsMenuOpen(false);
   };
 
   return (
     <>
+      {/* Top Nav — desktop only */}
       <nav
         ref={navRef}
         className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800"
@@ -89,7 +96,7 @@ export function Navigation() {
               Supun
             </button>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Nav Links */}
             <ul className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -114,16 +121,6 @@ export function Navigation() {
                 </li>
               ))}
             </ul>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-white p-2 hover:bg-gray-800 rounded-lg transition-colors"
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMenuOpen}
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
           </div>
         </div>
 
@@ -136,33 +133,40 @@ export function Navigation() {
         />
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Bottom Nav — mobile only */}
       <div
-        className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 md:hidden ${
-          isMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-        aria-hidden={!isMenuOpen}
+        ref={bottomNavRef}
+        className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
+        role="navigation"
+        aria-label="Mobile navigation"
       >
-        <nav className="flex flex-col items-center justify-center h-full">
-          <ul className="space-y-8">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <button
-                  onClick={() => scrollToSection(item.href)}
-                  className={`text-3xl font-bold transition-colors ${
-                    activeSection === item.href.replace("#", "")
-                      ? "text-white"
-                      : "text-gray-500 hover:text-white"
+        <div className="flex items-center gap-1 px-3 py-3 bg-[#111]/90 backdrop-blur-xl rounded-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+          {navItems.map(({ label, href, icon: Icon }) => {
+            const isActive = activeSection === href.replace("#", "");
+            return (
+              <button
+                key={href}
+                onClick={() => scrollToSection(href)}
+                aria-label={label}
+                aria-current={isActive ? "page" : undefined}
+                className={`relative flex flex-col items-center justify-center gap-1 px-4 py-2 rounded-xl transition-all duration-300 ${
+                  isActive
+                    ? "bg-white text-black"
+                    : "text-gray-500 hover:text-white"
+                }`}
+              >
+                <Icon size={18} strokeWidth={isActive ? 2.5 : 1.8} />
+                <span
+                  className={`text-[10px] font-medium transition-all duration-300 ${
+                    isActive ? "opacity-100 max-h-4" : "opacity-0 max-h-0 overflow-hidden"
                   }`}
                 >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
+                  {label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
       </div>
     </>
   );
