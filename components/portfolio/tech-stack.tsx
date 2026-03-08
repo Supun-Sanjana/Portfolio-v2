@@ -149,10 +149,10 @@ export function TechStack() {
       <div className="max-w-7xl mx-auto px-4 w-full mt-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
-            { label: "Years Experience", value: "5+" },
-            { label: "Projects Completed", value: "50+" },
+            { label: "Years Experience", value: "3+" },
+            { label: "Projects Completed", value: "20+" },
             { label: "Technologies", value: "20+" },
-            { label: "Happy Clients", value: "30+" },
+            { label: "Happy Clients", value: "20+" },
           ].map((stat) => (
             <div
               key={stat.label}

@@ -20,9 +20,9 @@ const skills = [
   "Android",
   "MongoDB",
   "PostgreSQL",
-  "AI/ML",
   "Node.js",
   "GraphQL",
+  "Docker"
 ];
 
 const services = [
@@ -268,7 +268,7 @@ export function About() {
               className="absolute -right-4 top-8 p-4 bg-black text-white rounded-xl shadow-2xl"
               style={{ transform: "translateZ(50px)" }}
             >
-              <div className="text-3xl font-bold">4+</div>
+              <div className="text-3xl font-bold">3+</div>
               <div className="text-xs text-gray-400 uppercase tracking-wider">
                 Years Exp
               </div>
@@ -297,16 +297,10 @@ export function About() {
 
             <div className="about-content-item space-y-4 text-gray-600 leading-relaxed">
               <p>
-                I&apos;m a passionate full-stack developer with expertise in
-                building modern web and mobile applications. My journey spans
-                across various technologies including Next.js, React, Laravel,
-                and Android development.
+                I build products end-to-end — from the backend logic to the interface people actually use. My work spans web, mobile, and everything in between, with a focus on Next.js, React, Laravel, and Android.
               </p>
               <p>
-                I specialize in creating e-commerce platforms, POS systems, and
-                integrating AI capabilities into applications. When I&apos;m not
-                coding, you&apos;ll find me exploring the cosmos through my
-                telescope.
+                I've shipped e-commerce platforms, POS systems, and AI-integrated apps for clients who needed someone who could own the whole stack. Off the screen, I spend my nights looking at things much further away — through a telescope.
               </p>
             </div>
 

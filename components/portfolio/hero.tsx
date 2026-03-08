@@ -402,8 +402,7 @@ export function Hero() {
             </div>
 
             <p className="hero-tagline text-sm sm:text-base md:text-lg text-gray-500 max-w-xl mx-auto mb-8 text-pretty">
-              Building immersive web & mobile experiences with cutting-edge
-              technologies
+              I build the whole thing — and I care about every layer of it.
             </p>
 
             {/* CTA Buttons */}
